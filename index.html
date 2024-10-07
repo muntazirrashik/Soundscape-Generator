@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundscape Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Soundscape Generator</h1>
+        <div id="control-panel">
+            <h2></h2>
+            <div class="sound-control">
+                <label for="rain">Rain</label>
+                <input type="checkbox" id="rain-checkbox" onclick="toggleSound('rain')">
+                <input type="range" id="rain-volume" min="0" max="100" value="50" onchange="adjustVolume('rain')">
+            </div>
+            <div class="sound-control">
+                <label for="waves">Waves</label>
+                <input type="checkbox" id="waves-checkbox" onclick="toggleSound('waves')">
+                <input type="range" id="waves-volume" min="0" max="100" value="50" onchange="adjustVolume('waves')">
+            </div>
+            <div class="sound-control">
+                <label for="wind">Wind</label>
+                <input type="checkbox" id="wind-checkbox" onclick="toggleSound('wind')">
+                <input type="range" id="wind-volume" min="0" max="100" value="50" onchange="adjustVolume('wind')">
+            </div>
+            <div class="sound-control">
+                <label for="birds">Birds</label>
+                <input type="checkbox" id="birds-checkbox" onclick="toggleSound('birds')">
+                <input type="range" id="birds-volume" min="0" max="100" value="50" onchange="adjustVolume('birds')">
+            </div>
+            
+            <!-- Reset button with circular arrow icon -->
+            <button id="reset-button" onclick="resetSounds()">
+                <img src="reset-icon.png" alt="Reset" class="reset-icon">
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
